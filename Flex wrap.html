@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            height: 150px;
+            border:2px solid black;
+            max-width: 310px;
+            flex-direction: column;
+        }
+
+        .item{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 50px;
+        }
+
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .pink{
+            background-color: pink;
+        }
+
+        .purple{
+            background-color: purple;
+        }
+
+        .aquamarine{
+            background-color: aquamarine;
+        }
+
+        
+        .wrap-reverser{
+            flex-wrap: wrap-reverse;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>no Wrap</h1>
+    <div class="flex-container">
+        <div class="item pink">1</div>
+        <div class="item purple">2</div>
+        <div class="item aquamarine">3</div>
+        <div class="item aquamarine">4</div>
+
+    </div>
+    <h1>Wrap</h1>
+
+    <div class="flex-container wrap">
+        <div class="item pink">1</div>
+        <div class="item purple">2</div>
+        <div class="item aquamarine">3</div>
+        <div class="item aquamarine">4</div>
+        <div class="item purple">2</div>
+        <div class="item pink">1</div>
+       </div>
+
+        <h1>Wrap wrap-reverse</h1>
+
+        <div class="flex-container wrap-reverse">
+            <div class="item pink">1</div>
+            <div class="item purple">2</div>
+            <div class="item aquamarine">3</div>
+        </div>
+
+</body>
+</html>
